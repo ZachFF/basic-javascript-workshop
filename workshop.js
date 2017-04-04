@@ -47,11 +47,38 @@ function multiplyTwoNumbers(num1, num2) {
 }
 
 function calculator(operation, num1, num2) {
-
+       var choice = operation.toUpperCase();
+       if(choice == "ADD" && num1 && num2){
+           return num1 + num2
+       }
+       else if(choice =="SUB" && num1 && num2){
+           return num1 - num2
+           
+       }
+       else if(choice =="DIV" && num1 && num2){
+           return num1 / num2
+       }
+       else if(choice =="MULT" && num1 && num2){
+           return num1 * num2
+       }
+       else if(choice =="MODU" && num1 && num2){
+           return num1 % num2
+       }
+      else{
+          return undefined
+      }
 }
 
 function repeatString(inputString, numRepetitions) {
-
+    if(typeof inputString == "string" && numRepetitions > 0){
+        return inputString.repeat(numRepetitions)
+    }
+    else if(typeof inputString =="string" &&numRepetitions <= 0){
+        return ""
+    }
+    else{
+        return undefined
+    }
 }
 
 function reverseString(inputString) {
