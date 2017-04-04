@@ -125,8 +125,21 @@ function capitalize(inputString) {
 }
 
 function sumOfNumbers(arrayOfNumbers) {
-
+   var sum = 0;
+    if (typeof arrayOfNumbers != "object"){
+        return    
+    }
+    for (var j= 0; j < arrayOfNumbers.length; j++) {
+        if (typeof arrayOfNumbers[j] !== "number") {
+            return 
+        }
+    }     
+    for (var i= 0; i < arrayOfNumbers.length; i++) {
+        sum = sum + arrayOfNumbers[i]
+    }
+    return sum
 }
+
 
 function uniqueElements(array1, array2) {
 
