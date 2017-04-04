@@ -1,5 +1,11 @@
 function firstLetter(inputString) {
-
+    if(inputString && isNaN(inputString)) {
+        return (inputString[0])
+        
+    }
+    else {
+        return undefined
+    }
 }
 
 function lastLetter(inputString) {
