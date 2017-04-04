@@ -9,10 +9,22 @@ function firstLetter(inputString) {
 }
 
 function lastLetter(inputString) {
-
+  if(inputString && isNaN(inputString)){
+      return(inputString[inputString.length-1])
+  }
+  else {
+      return undefined
+  }
+  
 }
 
 function letterAtPosition(inputString, position) {
+    if(inputString && isNaN(inputString)){
+        return (inputString[position])
+    }
+    else{
+        return undefined
+    }
 
 }
 
