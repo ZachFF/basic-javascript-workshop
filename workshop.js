@@ -71,18 +71,25 @@ function calculator(operation, num1, num2) {
 
 function repeatString(inputString, numRepetitions) {
     if(typeof inputString == "string" && numRepetitions > 0){
-        return inputString.repeat(numRepetitions)
+        return inputString.repeat(numRepetitions);
     }
     else if(typeof inputString =="string" &&numRepetitions <= 0){
-        return ""
+        return "";
     }
     else{
-        return undefined
+        return undefined;
     }
 }
 
 function reverseString(inputString) {
-
+    if(typeof inputString =="string" ){
+        if(inputString ===""){
+            return ""
+        }
+         else { return inputString.split("").reverse().join("");
+         }
+        
+         }
 }
 
 function longestWord(inputString) {
