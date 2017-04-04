@@ -93,11 +93,35 @@ function reverseString(inputString) {
 }
 
 function longestWord(inputString) {
-
+if(inputString === ""){
+    return ""
+}
+else if(typeof inputString =="string"){
+    var array = inputString.split(" ")
+     
+     var word="";
+    for(var i = 0; i < array.length; i++){
+        if(array[i].length > word.length){
+            word = array[i]
+        }
+    }
+    return word
+}
 }
 
 function capitalize(inputString) {
-
+    if(inputString ===""){
+        return ""
+    }
+    var array = inputString.toLowerCase().split(" ");
+    for( var i =0; i<array.length;i++){
+        var letters = array[i].split("")
+        letters[0] =letters[0].toUpperCase();
+        array[i]=letters.join("")
+    
+    }
+    return array.join(" ")
+ 
 }
 
 function sumOfNumbers(arrayOfNumbers) {
