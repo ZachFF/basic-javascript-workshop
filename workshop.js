@@ -142,10 +142,37 @@ function sumOfNumbers(arrayOfNumbers) {
 
 
 function uniqueElements(array1, array2) {
-
+  
+var arrayTemp = [];
+    
+    if (typeof array1 != "object" && typeof array2 != "object") {
+        return;
+    }
+    
+    for (var i = 0; i < array1.length; i++) {
+        if (array2.indexOf(array1[i]) < 0) {
+            arrayTemp.push(array1[i])
+        }
+    }
+    
+    for (var j = 0; j < array2.length; j++) {
+        if (array1.indexOf(array2[j]) < 0) {
+            arrayTemp.push(array2[j])
+        }
+    }
+    return arrayTemp
 }
 
 function isPalindrome(inputString) {
+   inputString = inputString.replace(/[^a-zA-Z ]/g, "").split(" ").join("").toLowerCase()
+     console.log(inputString);
+    var L = inputString.length;
+    for (var i = 0; i < L / 2; i++) {
+        if (inputString.charAt(i) !== inputString.charAt(L - 1 - i)) {
+            return false;
+        }
+    }
+    return true;
 
 }
 
