@@ -177,7 +177,20 @@ function isPalindrome(inputString) {
 }
 
 function wrapCharacter(inputString) {
-
+    var array = inputString.split("")
+   
+    for(var i = 0;i<array.length;i++){
+        if(i % 40 ===0 && i > 0){
+               
+               if(array[i]===" "){
+                  array[i]= "\n"
+             }
+               else{
+                  array[i] += "\n"
+              }
+    }
+ }
+ return array.join("")
 }
 
 function wrapWord(inputString) {
